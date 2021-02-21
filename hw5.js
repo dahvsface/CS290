@@ -13,24 +13,14 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 6945);
+app.set('port', 6946);
 
 app.get('/',function(req,res){
-    var getTitle = '<h1>GET Request Received</h1>';
-    getTitle += '<table><tbody><tr>';
-    getTitle += '<td>url: ' + req.url + '</td>';
-    getTitle += '<td>body: ' + req.body + '</td>';
-    getTitle += '</tr></tbody></table>';
-    res.send(getTitle);
+    res.render('get');
 });
 
 app.post('/',function(req,res){
-    var postTitle = '<h1>POST Request Received</h1>';
-    postTitle += '<table><tbody><tr>';
-    postTitle += '<td>url: ' + req.url + '</td>';
-    postTitle += '<td>body: ' + req.body + '</td>';
-    postTitle += '</tr></tbody></table>';
-    res.send(postTitle);
+    res.render('post')
 });
 
 app.use(function(req,res){
