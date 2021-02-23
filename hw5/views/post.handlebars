@@ -1,0 +1,33 @@
+<h1>POST Request Received</h1>
+
+<table>
+    <caption><b>URL Query String</b></caption>
+        <thead>
+        <tr>
+            <td>Name</td><td>Value</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each item1}}
+            <tr>
+                <td>{{this.qName}}</td><td>{{this.qValue}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+</table>
+
+<table>
+    <caption><b>URL Body String</b></caption>
+        <thead>
+        <tr>
+            <td>Name</td><td>Value</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each item2}}
+            <tr>
+                <td>{{this.bName}}</td><td>{{this.bValue}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+</table>

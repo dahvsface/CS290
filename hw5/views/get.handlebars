@@ -1,0 +1,17 @@
+<h1>GET Request Received</h1>
+
+<table>
+    <caption><b>URL Query String</b></caption>
+    <thead>
+    <tr>
+        <td>Name</td><td>Value</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each item}}
+        <tr>
+            <td>{{this.qName}}</td><td>{{this.qValue}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
